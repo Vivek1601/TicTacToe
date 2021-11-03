@@ -18,6 +18,10 @@ public class ticTacToe {
                 System.out.println("Position taken! Enter a correct Position");
                 playerPos = scn.nextInt();
             }
+            if (playerPos >= 10) {
+                System.out.println("Invalid Position! Enter a correct Position");
+                playerPos = scn.nextInt();
+            }
             placePiece(gameboard, playerPos, "player");
 
             String result = checkWinner();
@@ -64,35 +68,35 @@ public class ticTacToe {
         }
 
         switch (pos) {
-            case 1:
-                gameboard[0][0] = symbol;
-                break;
-            case 2:
-                gameboard[0][2] = symbol;
-                break;
-            case 3:
-                gameboard[0][4] = symbol;
-                break;
-            case 4:
-                gameboard[2][0] = symbol;
-                break;
-            case 5:
-                gameboard[2][2] = symbol;
-                break;
-            case 6:
-                gameboard[2][4] = symbol;
-                break;
-            case 7:
-                gameboard[4][0] = symbol;
-                break;
-            case 8:
-                gameboard[4][2] = symbol;
-                break;
-            case 9:
-                gameboard[4][4] = symbol;
-                break;
-            default:
-                break;
+        case 1:
+            gameboard[0][0] = symbol;
+            break;
+        case 2:
+            gameboard[0][2] = symbol;
+            break;
+        case 3:
+            gameboard[0][4] = symbol;
+            break;
+        case 4:
+            gameboard[2][0] = symbol;
+            break;
+        case 5:
+            gameboard[2][2] = symbol;
+            break;
+        case 6:
+            gameboard[2][4] = symbol;
+            break;
+        case 7:
+            gameboard[4][0] = symbol;
+            break;
+        case 8:
+            gameboard[4][2] = symbol;
+            break;
+        case 9:
+            gameboard[4][4] = symbol;
+            break;
+        default:
+            break;
         }
     }
 
